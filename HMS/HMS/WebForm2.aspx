@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        hehe
+        <a href="http://shanghai.anjuke.com">猛戳这里买卖房子</a>
     </div>
     </form>
 </body>
