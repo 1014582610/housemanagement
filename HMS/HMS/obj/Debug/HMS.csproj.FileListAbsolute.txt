@@ -1,0 +1,5 @@
+G:\myproject\housemanagement\HMS\HMS\bin\HMS.dll
+G:\myproject\housemanagement\HMS\HMS\bin\HMS.pdb
+G:\myproject\housemanagement\HMS\HMS\obj\Debug\HMS.csprojResolveAssemblyReference.cache
+G:\myproject\housemanagement\HMS\HMS\obj\Debug\HMS.dll
+G:\myproject\housemanagement\HMS\HMS\obj\Debug\HMS.pdb
