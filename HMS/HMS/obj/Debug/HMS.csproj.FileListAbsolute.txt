@@ -3,3 +3,8 @@ G:\myproject\housemanagement\HMS\HMS\bin\HMS.pdb
 G:\myproject\housemanagement\HMS\HMS\obj\Debug\HMS.csprojResolveAssemblyReference.cache
 G:\myproject\housemanagement\HMS\HMS\obj\Debug\HMS.dll
 G:\myproject\housemanagement\HMS\HMS\obj\Debug\HMS.pdb
+C:\Users\wys\Desktop\housemanagement\housemanagement\HMS\HMS\obj\Debug\HMS.csprojResolveAssemblyReference.cache
+C:\Users\wys\Desktop\housemanagement\housemanagement\HMS\HMS\obj\Debug\HMS.dll
+C:\Users\wys\Desktop\housemanagement\housemanagement\HMS\HMS\bin\HMS.dll
+C:\Users\wys\Desktop\housemanagement\housemanagement\HMS\HMS\bin\HMS.pdb
+C:\Users\wys\Desktop\housemanagement\housemanagement\HMS\HMS\obj\Debug\HMS.pdb

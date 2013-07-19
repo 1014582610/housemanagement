@@ -11,6 +11,23 @@
     <form id="form1" runat="server">
     <div>
         hehe
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HouseManagementDBConnectionString %>" SelectCommand="SELECT * FROM [address]"></asp:SqlDataSource>
+        <asp:Table ID="Table1" runat="server" Height="157px" Width="321px">
+            <asp:TableRow runat="server" EnableViewState="False">
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow runat="server">
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="height: 21px" Text="Button" />
+        <br />
     </div>
     </form>
 </body>
