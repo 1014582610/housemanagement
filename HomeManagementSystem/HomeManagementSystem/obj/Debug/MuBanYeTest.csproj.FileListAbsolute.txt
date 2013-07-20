@@ -1,0 +1,5 @@
+c:\users\wys\documents\visual studio 2012\Projects\MuBanYeTest\MuBanYeTest\bin\MuBanYeTest.dll
+c:\users\wys\documents\visual studio 2012\Projects\MuBanYeTest\MuBanYeTest\bin\MuBanYeTest.pdb
+c:\users\wys\documents\visual studio 2012\Projects\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.csprojResolveAssemblyReference.cache
+c:\users\wys\documents\visual studio 2012\Projects\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.dll
+c:\users\wys\documents\visual studio 2012\Projects\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.pdb
