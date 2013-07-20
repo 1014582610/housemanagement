@@ -1,0 +1,5 @@
+C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\bin\MuBanYeTest.dll
+C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\bin\MuBanYeTest.pdb
+C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\HomeManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.dll
+C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.pdb
