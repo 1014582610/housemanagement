@@ -19,10 +19,11 @@ a:hover {
 
 .welcome {
   position: absolute;
-  top: 20%;
+  top: 44%;
   text-align: left;
   font-size: 30px;
   max-width: 300px;
+    left: 91px;
 }
 
 .form-signin {
@@ -45,7 +46,6 @@ a:hover {
 .form-signin input[type="text"],
 .form-signin input[type="password"] {
   font-size: 16px;
-  height: auto;
   margin-bottom: 15px;
   padding: 7px 9px;
 }

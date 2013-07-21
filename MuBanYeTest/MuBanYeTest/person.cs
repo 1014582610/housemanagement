@@ -20,6 +20,7 @@ namespace MuBanYeTest
         public string names { get; set; }
         public string phone { get; set; }
         public byte[] photo { get; set; }
+        public string identity_number { get; set; }
     
         public virtual agent agent { get; set; }
         public virtual member member { get; set; }

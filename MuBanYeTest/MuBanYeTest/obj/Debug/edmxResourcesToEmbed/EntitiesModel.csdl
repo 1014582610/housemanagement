@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HouseManagementDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HouseManagementDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="addresses" EntityType="HouseManagementDBModel.address" />
+    <EntitySet Name="agents" EntityType="HouseManagementDBModel.agent" />
+    <EntitySet Name="delegates" EntityType="HouseManagementDBModel.delegate" />
+    <EntitySet Name="houses" EntityType="HouseManagementDBModel.house" />
+    <EntitySet Name="manages" EntityType="HouseManagementDBModel.manage" />
+    <EntitySet Name="members" EntityType="HouseManagementDBModel.member" />
+    <EntitySet Name="people" EntityType="HouseManagementDBModel.person" />
+    <EntitySet Name="photos" EntityType="HouseManagementDBModel.photo" />
+    <EntitySet Name="renthouses" EntityType="HouseManagementDBModel.renthouse" />
+    <EntitySet Name="salehouses" EntityType="HouseManagementDBModel.salehouse" />
+    <EntitySet Name="settings" EntityType="HouseManagementDBModel.setting" />
+    <AssociationSet Name="FK__house__address__0BC6C43E" Association="HouseManagementDBModel.FK__house__address__0BC6C43E">
+      <End Role="address" EntitySet="addresses" />
+      <End Role="house" EntitySet="houses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__agent__person_id__00551192" Association="HouseManagementDBModel.FK__agent__person_id__00551192">
+      <End Role="person" EntitySet="people" />
+      <End Role="agent" EntitySet="agents" />
+    </AssociationSet>
+    <AssociationSet Name="FK__delegate__agent__164452B1" Association="HouseManagementDBModel.FK__delegate__agent__164452B1">
+      <End Role="agent" EntitySet="agents" />
+      <End Role="delegate" EntitySet="delegates" />
+    </AssociationSet>
+    <AssociationSet Name="FK__manage__agent__117F9D94" Association="HouseManagementDBModel.FK__manage__agent__117F9D94">
+      <End Role="agent" EntitySet="agents" />
+      <End Role="manage" EntitySet="manages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__delegate__house__173876EA" Association="HouseManagementDBModel.FK__delegate__house__173876EA">
+      <End Role="house" EntitySet="houses" />
+      <End Role="delegate" EntitySet="delegates" />
+    </AssociationSet>
+    <AssociationSet Name="FK__delegate__member__15502E78" Association="HouseManagementDBModel.FK__delegate__member__15502E78">
+      <End EntitySet="members" Role="member" />
+      <End EntitySet="delegates" Role="delegate" />
+    </AssociationSet>
+    <AssociationSet Name="FK__house__member__0CBAE877" Association="HouseManagementDBModel.FK__house__member__0CBAE877">
+      <End EntitySet="members" Role="member" />
+      <End EntitySet="houses" Role="house" />
+    </AssociationSet>
+    <AssociationSet Name="FK__manage__house__108B795B" Association="HouseManagementDBModel.FK__manage__house__108B795B">
+      <End Role="house" EntitySet="houses" />
+      <End Role="manage" EntitySet="manages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__photo__house__1CF15040" Association="HouseManagementDBModel.FK__photo__house__1CF15040">
+      <End Role="house" EntitySet="houses" />
+      <End Role="photo" EntitySet="photos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__renthouse__house__1FCDBCEB" Association="HouseManagementDBModel.FK__renthouse__house__1FCDBCEB">
+      <End Role="house" EntitySet="houses" />
+      <End Role="renthouse" EntitySet="renthouses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__salehouse__house__267ABA7A" Association="HouseManagementDBModel.FK__salehouse__house__267ABA7A">
+      <End Role="house" EntitySet="houses" />
+      <End Role="salehouse" EntitySet="salehouses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__member__person_i__0519C6AF" Association="HouseManagementDBModel.FK__member__person_i__0519C6AF">
+      <End EntitySet="people" Role="person" />
+      <End EntitySet="members" Role="member" />
+    </AssociationSet>
+    <AssociationSet Name="FK__setting__renthou__239E4DCF" Association="HouseManagementDBModel.FK__setting__renthou__239E4DCF">
+      <End Role="renthouse" EntitySet="renthouses" />
+      <End Role="setting" EntitySet="settings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="address">
+    <Key>
+      <PropertyRef Name="address_id" />
+    </Key>
+    <Property Name="address_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="city" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="area" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="street" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="community" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="houses" Relationship="HouseManagementDBModel.FK__house__address__0BC6C43E" FromRole="address" ToRole="house" />
+  </EntityType>
+  <EntityType Name="agent">
+    <Key>
+      <PropertyRef Name="person_id" />
+    </Key>
+    <Property Name="person_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="profession" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="register_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="valid_date" Type="DateTime" Precision="3" />
+    <Property Name="trade_number" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="person" Relationship="HouseManagementDBModel.FK__agent__person_id__00551192" FromRole="agent" ToRole="person" />
+    <NavigationProperty Name="delegates" Relationship="HouseManagementDBModel.FK__delegate__agent__164452B1" FromRole="agent" ToRole="delegate" />
+    <NavigationProperty Name="manages" Relationship="HouseManagementDBModel.FK__manage__agent__117F9D94" FromRole="agent" ToRole="manage" />
+  </EntityType>
+  <EntityType Name="delegate">
+    <Key>
+      <PropertyRef Name="member" />
+      <PropertyRef Name="agent" />
+      <PropertyRef Name="house" />
+    </Key>
+    <Property Name="member" Type="Int32" Nullable="false" />
+    <Property Name="agent" Type="Int32" Nullable="false" />
+    <Property Name="house" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="messages" Type="String" Nullable="false" MaxLength="140" Unicode="false" FixedLength="false" />
+    <Property Name="state" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="agent1" Relationship="HouseManagementDBModel.FK__delegate__agent__164452B1" FromRole="delegate" ToRole="agent" />
+    <NavigationProperty Name="house1" Relationship="HouseManagementDBModel.FK__delegate__house__173876EA" FromRole="delegate" ToRole="house" />
+    <NavigationProperty Name="member1" Relationship="HouseManagementDBModel.FK__delegate__member__15502E78" FromRole="delegate" ToRole="member" />
+  </EntityType>
+  <EntityType Name="house">
+    <Key>
+      <PropertyRef Name="house_id" />
+    </Key>
+    <Property Name="house_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="levels" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="area" Type="Int32" />
+    <Property Name="orientation" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="types" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="decoration" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="thumbnails" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="room" Type="Byte" />
+    <Property Name="hall" Type="Byte" />
+    <Property Name="toilet" Type="Byte" />
+    <Property Name="address" Type="Int32" />
+    <Property Name="member" Type="Int32" />
+    <NavigationProperty Name="address1" Relationship="HouseManagementDBModel.FK__house__address__0BC6C43E" FromRole="house" ToRole="address" />
+    <NavigationProperty Name="delegates" Relationship="HouseManagementDBModel.FK__delegate__house__173876EA" FromRole="house" ToRole="delegate" />
+    <NavigationProperty Name="member1" Relationship="HouseManagementDBModel.FK__house__member__0CBAE877" FromRole="house" ToRole="member" />
+    <NavigationProperty Name="manages" Relationship="HouseManagementDBModel.FK__manage__house__108B795B" FromRole="house" ToRole="manage" />
+    <NavigationProperty Name="photos" Relationship="HouseManagementDBModel.FK__photo__house__1CF15040" FromRole="house" ToRole="photo" />
+    <NavigationProperty Name="renthouse" Relationship="HouseManagementDBModel.FK__renthouse__house__1FCDBCEB" FromRole="house" ToRole="renthouse" />
+    <NavigationProperty Name="salehouse" Relationship="HouseManagementDBModel.FK__salehouse__house__267ABA7A" FromRole="house" ToRole="salehouse" />
+  </EntityType>
+  <EntityType Name="manage">
+    <Key>
+      <PropertyRef Name="date" />
+    </Key>
+    <Property Name="house" Type="Int32" />
+    <Property Name="agent" Type="Int32" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="agent1" Relationship="HouseManagementDBModel.FK__manage__agent__117F9D94" FromRole="manage" ToRole="agent" />
+    <NavigationProperty Name="house1" Relationship="HouseManagementDBModel.FK__manage__house__108B795B" FromRole="manage" ToRole="house" />
+  </EntityType>
+  <EntityType Name="member">
+    <Key>
+      <PropertyRef Name="person_id" />
+    </Key>
+    <Property Name="person_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="identity_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+    <NavigationProperty Name="delegates" Relationship="HouseManagementDBModel.FK__delegate__member__15502E78" FromRole="member" ToRole="delegate" />
+    <NavigationProperty Name="houses" Relationship="HouseManagementDBModel.FK__house__member__0CBAE877" FromRole="member" ToRole="house" />
+    <NavigationProperty Name="person" Relationship="HouseManagementDBModel.FK__member__person_i__0519C6AF" FromRole="member" ToRole="person" />
+  </EntityType>
+  <EntityType Name="person">
+    <Key>
+      <PropertyRef Name="person_id" />
+    </Key>
+    <Property Name="person_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="names" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="agent" Relationship="HouseManagementDBModel.FK__agent__person_id__00551192" FromRole="person" ToRole="agent" />
+    <NavigationProperty Name="member" Relationship="HouseManagementDBModel.FK__member__person_i__0519C6AF" FromRole="person" ToRole="member" />
+    <Property Type="String" Name="identity_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="photo">
+    <Key>
+      <PropertyRef Name="house" />
+      <PropertyRef Name="picture" />
+    </Key>
+    <Property Name="house" Type="Int32" Nullable="false" />
+    <Property Name="picture" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="house1" Relationship="HouseManagementDBModel.FK__photo__house__1CF15040" FromRole="photo" ToRole="house" />
+  </EntityType>
+  <EntityType Name="renthouse">
+    <Key>
+      <PropertyRef Name="house_id" />
+    </Key>
+    <Property Name="house_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="types" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="payment" Type="Int32" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="house" Relationship="HouseManagementDBModel.FK__renthouse__house__1FCDBCEB" FromRole="renthouse" ToRole="house" />
+    <NavigationProperty Name="settings" Relationship="HouseManagementDBModel.FK__setting__renthou__239E4DCF" FromRole="renthouse" ToRole="setting" />
+  </EntityType>
+  <EntityType Name="salehouse">
+    <Key>
+      <PropertyRef Name="house_id" />
+    </Key>
+    <Property Name="house_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="types" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="developer" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="number" Type="Int32" />
+    <Property Name="property_costs" Type="Int32" />
+    <Property Name="build_date" Type="DateTime" Precision="3" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="house" Relationship="HouseManagementDBModel.FK__salehouse__house__267ABA7A" FromRole="salehouse" ToRole="house" />
+  </EntityType>
+  <EntityType Name="setting">
+    <Key>
+      <PropertyRef Name="renthouse" />
+      <PropertyRef Name="rentsetting" />
+    </Key>
+    <Property Name="renthouse" Type="Int32" Nullable="false" />
+    <Property Name="rentsetting" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="renthouse1" Relationship="HouseManagementDBModel.FK__setting__renthou__239E4DCF" FromRole="setting" ToRole="renthouse" />
+  </EntityType>
+  <Association Name="FK__house__address__0BC6C43E">
+    <End Role="address" Type="HouseManagementDBModel.address" Multiplicity="0..1" />
+    <End Role="house" Type="HouseManagementDBModel.house" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="address">
+        <PropertyRef Name="address_id" />
+      </Principal>
+      <Dependent Role="house">
+        <PropertyRef Name="address" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__agent__person_id__00551192">
+    <End Role="person" Type="HouseManagementDBModel.person" Multiplicity="1" />
+    <End Role="agent" Type="HouseManagementDBModel.agent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="person">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="agent">
+        <PropertyRef Name="person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__delegate__agent__164452B1">
+    <End Role="agent" Type="HouseManagementDBModel.agent" Multiplicity="1" />
+    <End Role="delegate" Type="HouseManagementDBModel.delegate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agent">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="delegate">
+        <PropertyRef Name="agent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__manage__agent__117F9D94">
+    <End Role="agent" Type="HouseManagementDBModel.agent" Multiplicity="0..1" />
+    <End Role="manage" Type="HouseManagementDBModel.manage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agent">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="manage">
+        <PropertyRef Name="agent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__delegate__house__173876EA">
+    <End Role="house" Type="HouseManagementDBModel.house" Multiplicity="1" />
+    <End Role="delegate" Type="HouseManagementDBModel.delegate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="house">
+        <PropertyRef Name="house_id" />
+      </Principal>
+      <Dependent Role="delegate">
+        <PropertyRef Name="house" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__delegate__member__15502E78">
+    <End Type="HouseManagementDBModel.member" Multiplicity="1" Role="member" />
+    <End Type="HouseManagementDBModel.delegate" Multiplicity="*" Role="delegate" />
+    <ReferentialConstraint>
+      <Principal Role="member">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="delegate">
+        <PropertyRef Name="member" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__house__member__0CBAE877">
+    <End Type="HouseManagementDBModel.member" Multiplicity="0..1" Role="member" />
+    <End Type="HouseManagementDBModel.house" Multiplicity="*" Role="house" />
+    <ReferentialConstraint>
+      <Principal Role="member">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="house">
+        <PropertyRef Name="member" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__manage__house__108B795B">
+    <End Role="house" Type="HouseManagementDBModel.house" Multiplicity="0..1" />
+    <End Role="manage" Type="HouseManagementDBModel.manage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="house">
+        <PropertyRef Name="house_id" />
+      </Principal>
+      <Dependent Role="manage">
+        <PropertyRef Name="house" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__photo__house__1CF15040">
+    <End Role="house" Type="HouseManagementDBModel.house" Multiplicity="1" />
+    <End Role="photo" Type="HouseManagementDBModel.photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="house">
+        <PropertyRef Name="house_id" />
+      </Principal>
+      <Dependent Role="photo">
+        <PropertyRef Name="house" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__renthouse__house__1FCDBCEB">
+    <End Role="house" Type="HouseManagementDBModel.house" Multiplicity="1" />
+    <End Role="renthouse" Type="HouseManagementDBModel.renthouse" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="house">
+        <PropertyRef Name="house_id" />
+      </Principal>
+      <Dependent Role="renthouse">
+        <PropertyRef Name="house_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__salehouse__house__267ABA7A">
+    <End Role="house" Type="HouseManagementDBModel.house" Multiplicity="1" />
+    <End Role="salehouse" Type="HouseManagementDBModel.salehouse" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="house">
+        <PropertyRef Name="house_id" />
+      </Principal>
+      <Dependent Role="salehouse">
+        <PropertyRef Name="house_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__member__person_i__0519C6AF">
+    <End Type="HouseManagementDBModel.person" Multiplicity="1" Role="person" />
+    <End Type="HouseManagementDBModel.member" Multiplicity="0..1" Role="member" />
+    <ReferentialConstraint>
+      <Principal Role="person">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="member">
+        <PropertyRef Name="person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__setting__renthou__239E4DCF">
+    <End Role="renthouse" Type="HouseManagementDBModel.renthouse" Multiplicity="1" />
+    <End Role="setting" Type="HouseManagementDBModel.setting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="renthouse">
+        <PropertyRef Name="house_id" />
+      </Principal>
+      <Dependent Role="setting">
+        <PropertyRef Name="renthouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

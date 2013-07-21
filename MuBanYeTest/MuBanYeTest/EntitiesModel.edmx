@@ -387,12 +387,12 @@
             <End Role="delegate" EntitySet="delegates" />
           </AssociationSet>
           <AssociationSet Name="FK__delegate__member__15502E78" Association="HouseManagementDBModel.FK__delegate__member__15502E78">
-            <End Role="member" EntitySet="members" />
-            <End Role="delegate" EntitySet="delegates" />
+            <End EntitySet="members" Role="member" />
+            <End EntitySet="delegates" Role="delegate" />
           </AssociationSet>
           <AssociationSet Name="FK__house__member__0CBAE877" Association="HouseManagementDBModel.FK__house__member__0CBAE877">
-            <End Role="member" EntitySet="members" />
-            <End Role="house" EntitySet="houses" />
+            <End EntitySet="members" Role="member" />
+            <End EntitySet="houses" Role="house" />
           </AssociationSet>
           <AssociationSet Name="FK__manage__house__108B795B" Association="HouseManagementDBModel.FK__manage__house__108B795B">
             <End Role="house" EntitySet="houses" />
@@ -411,8 +411,8 @@
             <End Role="salehouse" EntitySet="salehouses" />
           </AssociationSet>
           <AssociationSet Name="FK__member__person_i__0519C6AF" Association="HouseManagementDBModel.FK__member__person_i__0519C6AF">
-            <End Role="person" EntitySet="people" />
-            <End Role="member" EntitySet="members" />
+            <End EntitySet="people" Role="person" />
+            <End EntitySet="members" Role="member" />
           </AssociationSet>
           <AssociationSet Name="FK__setting__renthou__239E4DCF" Association="HouseManagementDBModel.FK__setting__renthou__239E4DCF">
             <End Role="renthouse" EntitySet="renthouses" />
@@ -497,8 +497,8 @@
           <Key>
             <PropertyRef Name="person_id" />
           </Key>
-          <Property Name="person_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="identity_number" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="person_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="identity_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
           <NavigationProperty Name="delegates" Relationship="HouseManagementDBModel.FK__delegate__member__15502E78" FromRole="member" ToRole="delegate" />
           <NavigationProperty Name="houses" Relationship="HouseManagementDBModel.FK__house__member__0CBAE877" FromRole="member" ToRole="house" />
           <NavigationProperty Name="person" Relationship="HouseManagementDBModel.FK__member__person_i__0519C6AF" FromRole="member" ToRole="person" />
@@ -515,6 +515,7 @@
           <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="agent" Relationship="HouseManagementDBModel.FK__agent__person_id__00551192" FromRole="person" ToRole="agent" />
           <NavigationProperty Name="member" Relationship="HouseManagementDBModel.FK__member__person_i__0519C6AF" FromRole="person" ToRole="member" />
+          <Property Type="String" Name="identity_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="photo">
           <Key>
@@ -620,8 +621,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__delegate__member__15502E78">
-          <End Role="member" Type="HouseManagementDBModel.member" Multiplicity="1" />
-          <End Role="delegate" Type="HouseManagementDBModel.delegate" Multiplicity="*" />
+          <End Type="HouseManagementDBModel.member" Multiplicity="1" Role="member" />
+          <End Type="HouseManagementDBModel.delegate" Multiplicity="*" Role="delegate" />
           <ReferentialConstraint>
             <Principal Role="member">
               <PropertyRef Name="person_id" />
@@ -632,8 +633,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__house__member__0CBAE877">
-          <End Role="member" Type="HouseManagementDBModel.member" Multiplicity="0..1" />
-          <End Role="house" Type="HouseManagementDBModel.house" Multiplicity="*" />
+          <End Type="HouseManagementDBModel.member" Multiplicity="0..1" Role="member" />
+          <End Type="HouseManagementDBModel.house" Multiplicity="*" Role="house" />
           <ReferentialConstraint>
             <Principal Role="member">
               <PropertyRef Name="person_id" />
@@ -692,8 +693,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__member__person_i__0519C6AF">
-          <End Role="person" Type="HouseManagementDBModel.person" Multiplicity="1" />
-          <End Role="member" Type="HouseManagementDBModel.member" Multiplicity="0..1" />
+          <End Type="HouseManagementDBModel.person" Multiplicity="1" Role="person" />
+          <End Type="HouseManagementDBModel.member" Multiplicity="0..1" Role="member" />
           <ReferentialConstraint>
             <Principal Role="person">
               <PropertyRef Name="person_id" />

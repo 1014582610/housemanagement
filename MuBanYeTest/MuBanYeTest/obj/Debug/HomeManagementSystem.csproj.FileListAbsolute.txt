@@ -8,3 +8,6 @@ C:\Users\Yoga\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\bin\MuBan
 C:\Users\Yoga\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\HomeManagementSystem.csprojResolveAssemblyReference.cache
 C:\Users\Yoga\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.dll
 C:\Users\Yoga\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.pdb
+C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\bin\EntityFramework.dll
+C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\bin\EntityFramework.xml
+C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\bin\zh-Hans\EntityFramework.resources.dll

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HouseManagementDBModelStoreContainer" CdmEntityContainer="HouseManagementDBEntities">
+    <EntitySetMapping Name="addresses">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.address">
+        <MappingFragment StoreEntitySet="address">
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="community" ColumnName="community" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="agents">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.agent">
+        <MappingFragment StoreEntitySet="agent">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="profession" ColumnName="profession" />
+          <ScalarProperty Name="register_date" ColumnName="register_date" />
+          <ScalarProperty Name="valid_date" ColumnName="valid_date" />
+          <ScalarProperty Name="trade_number" ColumnName="trade_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="delegates">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.delegate">
+        <MappingFragment StoreEntitySet="delegate">
+          <ScalarProperty Name="member" ColumnName="member" />
+          <ScalarProperty Name="agent" ColumnName="agent" />
+          <ScalarProperty Name="house" ColumnName="house" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="messages" ColumnName="messages" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="houses">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.house">
+        <MappingFragment StoreEntitySet="house">
+          <ScalarProperty Name="house_id" ColumnName="house_id" />
+          <ScalarProperty Name="levels" ColumnName="levels" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="types" ColumnName="types" />
+          <ScalarProperty Name="decoration" ColumnName="decoration" />
+          <ScalarProperty Name="thumbnails" ColumnName="thumbnails" />
+          <ScalarProperty Name="room" ColumnName="room" />
+          <ScalarProperty Name="hall" ColumnName="hall" />
+          <ScalarProperty Name="toilet" ColumnName="toilet" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="member" ColumnName="member" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manages">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.manage">
+        <MappingFragment StoreEntitySet="manage">
+          <ScalarProperty Name="house" ColumnName="house" />
+          <ScalarProperty Name="agent" ColumnName="agent" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="members">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.member">
+        <MappingFragment StoreEntitySet="member">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="identity_number" ColumnName="identity_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="people">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.person">
+        <MappingFragment StoreEntitySet="person">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="names" ColumnName="names" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="photos">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.photo">
+        <MappingFragment StoreEntitySet="photo">
+          <ScalarProperty Name="house" ColumnName="house" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="renthouses">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.renthouse">
+        <MappingFragment StoreEntitySet="renthouse">
+          <ScalarProperty Name="house_id" ColumnName="house_id" />
+          <ScalarProperty Name="types" ColumnName="types" />
+          <ScalarProperty Name="payment" ColumnName="payment" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salehouses">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.salehouse">
+        <MappingFragment StoreEntitySet="salehouse">
+          <ScalarProperty Name="house_id" ColumnName="house_id" />
+          <ScalarProperty Name="types" ColumnName="types" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="developer" ColumnName="developer" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="property_costs" ColumnName="property_costs" />
+          <ScalarProperty Name="build_date" ColumnName="build_date" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="settings">
+      <EntityTypeMapping TypeName="HouseManagementDBModel.setting">
+        <MappingFragment StoreEntitySet="setting">
+          <ScalarProperty Name="renthouse" ColumnName="renthouse" />
+          <ScalarProperty Name="rentsetting" ColumnName="rentsetting" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
