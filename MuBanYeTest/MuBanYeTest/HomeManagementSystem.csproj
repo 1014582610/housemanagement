@@ -66,6 +66,7 @@
     <Content Include="css\bootstrap-responsive.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\MuBanStyle.css" />
+    <Content Include="css\rent.css" />
     <Content Include="css\signin-css.css" />
     <Content Include="img\anjuke.png" />
     <Content Include="img\login-background.jpg" />
@@ -73,6 +74,7 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\js-login.js" />
     <Content Include="login.aspx" />
+    <Content Include="rent.aspx" />
     <Content Include="Resources\1239.jpg" />
     <Content Include="Resources\127.bmp" />
     <Content Include="Resources\128.bmp" />
@@ -143,6 +145,13 @@
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rent.aspx.cs">
+      <DependentUpon>rent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rent.aspx.designer.cs">
+      <DependentUpon>rent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="renthouse.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
