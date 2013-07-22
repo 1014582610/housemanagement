@@ -1,0 +1,29 @@
+﻿body
+{
+}
+
+dl
+{
+    margin:0px;
+    display:block;
+    overflow:hidden;
+}
+
+.search_condition dt
+{
+    float:left;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.search_condition dd
+{
+    float:left;
+    font-size: 12px;
+    margin: 0 2px;
+    white-space: nowrap;
+    height: 25px;
+    width: 39px;
+    padding: 0px;
+}

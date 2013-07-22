@@ -118,6 +118,12 @@
     <Compile Include="MuBanYe\MuBan.Master.designer.cs">
       <DependentUpon>MuBan.Master</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellHouse_first.aspx.cs">
+      <DependentUpon>SellHouse_first.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+=======
     <Compile Include="NewHouse.aspx.cs">
       <DependentUpon>NewHouse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -125,16 +131,23 @@
     <Compile Include="NewHouse.aspx.designer.cs">
       <DependentUpon>NewHouse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="person.cs">
+      <DependentUpon>EntitiesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="photo.cs">
+      <DependentUpon>EntitiesModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SellHouse_first.aspx.cs">
-      <DependentUpon>SellHouse_first.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-
+    <Compile Include="rent.aspx.cs">
+      <DependentUpon>rent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="rent.aspx.designer.cs">
       <DependentUpon>rent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="renthouse.cs">
+      <DependentUpon>EntitiesModel.tt</DependentUpon>
+>>>>>>> 17b22e6f567794085f3b8a96770bf1823bd82f8b
     </Compile>
     <Compile Include="SellHouse_first.aspx.designer.cs">
       <DependentUpon>SellHouse_first.aspx</DependentUpon>
