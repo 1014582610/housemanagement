@@ -19,3 +19,11 @@ C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\bin\zh
 C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\HomeManagementSystem.csprojResolveAssemblyReference.cache
 C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.dll
 C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.pdb
+G:\myproject\MuBanYeTest\MuBanYeTest\bin\MuBanYeTest.dll
+G:\myproject\MuBanYeTest\MuBanYeTest\bin\MuBanYeTest.pdb
+G:\myproject\MuBanYeTest\MuBanYeTest\bin\EntityFramework.dll
+G:\myproject\MuBanYeTest\MuBanYeTest\bin\EntityFramework.xml
+G:\myproject\MuBanYeTest\MuBanYeTest\bin\zh-Hans\EntityFramework.resources.dll
+G:\myproject\MuBanYeTest\MuBanYeTest\obj\Debug\HomeManagementSystem.csprojResolveAssemblyReference.cache
+G:\myproject\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.dll
+G:\myproject\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.pdb

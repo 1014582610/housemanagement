@@ -74,6 +74,7 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\js-login.js" />
     <Content Include="login.aspx" />
+    <Content Include="NewHouse.aspx" />
     <Content Include="rent.aspx" />
     <Content Include="Resources\1239.jpg" />
     <Content Include="Resources\127.bmp" />
@@ -137,6 +138,13 @@
     </Compile>
     <Compile Include="MuBanYe\MuBan.Master.designer.cs">
       <DependentUpon>MuBan.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewHouse.aspx.cs">
+      <DependentUpon>NewHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewHouse.aspx.designer.cs">
+      <DependentUpon>NewHouse.aspx</DependentUpon>
     </Compile>
     <Compile Include="person.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
