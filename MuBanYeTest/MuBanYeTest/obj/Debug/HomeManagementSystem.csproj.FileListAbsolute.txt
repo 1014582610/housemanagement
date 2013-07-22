@@ -11,3 +11,11 @@ C:\Users\Yoga\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug
 C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\bin\EntityFramework.dll
 C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\bin\EntityFramework.xml
 C:\Users\wys\Desktop\housemanagement\housemanagement\MuBanYeTest\MuBanYeTest\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\bin\MuBanYeTest.dll
+C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\bin\MuBanYeTest.pdb
+C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\bin\EntityFramework.dll
+C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\bin\EntityFramework.xml
+C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\HomeManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.dll
+C:\Users\Weimeng\Documents\GitHub\housemanagement\MuBanYeTest\MuBanYeTest\obj\Debug\MuBanYeTest.pdb
