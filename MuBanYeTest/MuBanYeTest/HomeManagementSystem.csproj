@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -67,6 +68,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\MuBanStyle.css" />
     <Content Include="css\signin-css.css" />
+    <Content Include="css\Wrapper.css" />
     <Content Include="img\anjuke.png" />
     <Content Include="img\login-background.jpg" />
     <Content Include="Index.aspx" />
@@ -78,36 +80,19 @@
     <Content Include="Resources\128.bmp" />
     <Content Include="Resources\129.bmp" />
     <Content Include="Resources\2.jpg" />
+    <Content Include="Resources\20130722160118_3241.png" />
+    <Content Include="Resources\20130722170040_1788.png" />
     <Content Include="Resources\3.jpg" />
+    <Content Include="SellHouse_first.aspx" />
+    <Content Include="SellHouse_second.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="address.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="agent.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="delegate.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntitiesModel.Context.cs">
+    <Compile Include="Commons.cs" />
+    <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EntitiesModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntitiesModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntitiesModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntitiesModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="house.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -123,12 +108,6 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="manage.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="member.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="MuBanYe\MuBan.Master.cs">
       <DependentUpon>MuBan.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,44 +115,31 @@
     <Compile Include="MuBanYe\MuBan.Master.designer.cs">
       <DependentUpon>MuBan.Master</DependentUpon>
     </Compile>
-    <Compile Include="person.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="photo.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="renthouse.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
+    <Compile Include="SellHouse_first.aspx.cs">
+      <DependentUpon>SellHouse_first.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="salehouse.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
+    <Compile Include="SellHouse_first.aspx.designer.cs">
+      <DependentUpon>SellHouse_first.aspx</DependentUpon>
     </Compile>
-    <Compile Include="setting.cs">
-      <DependentUpon>EntitiesModel.tt</DependentUpon>
+    <Compile Include="SellHouse_second.aspx.cs">
+      <DependentUpon>SellHouse_second.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellHouse_second.aspx.designer.cs">
+      <DependentUpon>SellHouse_second.aspx</DependentUpon>
     </Compile>
     <Compile Include="SqlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MuBanYe\MuBan.Master" />
-    <EntityDeploy Include="EntitiesModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EntitiesModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="EntitiesModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntitiesModel.edmx</DependentUpon>
-      <LastGenOutput>EntitiesModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EntitiesModel.edmx.diagram">
-      <DependentUpon>EntitiesModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="EntitiesModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntitiesModel.edmx</DependentUpon>
-      <LastGenOutput>EntitiesModel.cs</LastGenOutput>
-    </Content>
     <Content Include="packages.config" />
+    <Content Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -182,7 +148,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

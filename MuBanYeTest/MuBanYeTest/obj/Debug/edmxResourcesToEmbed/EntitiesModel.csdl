@@ -161,7 +161,6 @@
     <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="agent" Relationship="HouseManagementDBModel.FK__agent__person_id__00551192" FromRole="person" ToRole="agent" />
     <NavigationProperty Name="member" Relationship="HouseManagementDBModel.FK__member__person_i__0519C6AF" FromRole="person" ToRole="member" />
-    <Property Type="String" Name="identity_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="photo">
     <Key>

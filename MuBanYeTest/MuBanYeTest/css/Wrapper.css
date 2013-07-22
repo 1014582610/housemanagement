@@ -1,0 +1,19 @@
+﻿.wrapper-border-green {
+    border-style:groove;
+    border-width:thin;
+    border-color:greenyellow;
+    position:relative;
+}
+
+.wrapper-background-green-border-grey {
+border-style:groove;
+border-width:thin;
+border-color:grey;
+background-color:#DDFFF8
+}
+
+.wrapper-border-grey {
+    border-style:groove;
+border-width:thin;
+border-color:grey;
+}

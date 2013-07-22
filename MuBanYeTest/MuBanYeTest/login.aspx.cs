@@ -16,35 +16,47 @@ namespace MuBanYeTest
 
         protected void BTN_Register_Click(object sender, EventArgs e)
         {
-            HouseManagementDBEntities hmd = new HouseManagementDBEntities();
-            person p = new person();
-            member m = new member();
-            p.email = TB_Reg_UserEmail.Text;
-            p.password = TB_Reg_UserPassword.Text;
-            p.names = TB_Reg_UserName.Text;
-            p.phone = TB_Reg_UserPhone.Text;
-            string em = TB_Reg_UserEmail.Text;
-            hmd.SaveChanges();
-            person _p = (from pe in hmd.people where pe.email == em select p).Single();
-            m.person = _p;
-            m.identity_number = TB_Reg_UserIdentityNumber.Text;
-            //hmd.people.Add(p);
-            
-            hmd.members.Add(m);
-           
-            ////member m = new member();
-            //m.person = p;
-            //m.identity_number = TB_Reg_UserIdentityNumber.Text;
-
-            hmd.SaveChanges();
-
-
-            //m.person = _p;
-            
-           
+            DataClasses1DataContext dc = new DataClasses1DataContext();
+            string email = TB_Reg_UserEmail.Text;
+            person p = new person()
+                {
+                    email = TB_Reg_UserEmail.Text,
+                    password = TB_Reg_UserPassword.Text,
+                    names = TB_Reg_UserName.Text,
+                    phone = TB_Reg_UserPhone.Text
+                    
+                   
+                };
           
-            hmd.Dispose();
+           
+            dc.person.InsertOnSubmit(p);
+            
+                dc.SubmitChanges();
+        
+            member m = new member()
+            {
+               person_id = (dc.person.FirstOrDefault(a => a.email == email).person_id),
+                identity_number = TB_Reg_UserIdentityNumber.Text
+            };
+            dc.member.InsertOnSubmit(m);
+            dc.SubmitChanges();
+                
+            
 
+        }
+
+        protected void BTN_Login_Click(object sender, EventArgs e)
+        {
+            if (!Commons.doLogin(TB_Log_UserAccount.Text, TB_Log_UserPassword.Text))  //Login
+            {
+                Label6.Text = "用户名或密码错误！";
+            }
+            else
+            {
+                person p = Commons.findPersonByEmail(TB_Log_UserAccount.Text);
+                Session["Person"] = p;
+                Response.Redirect("Index.aspx");
+            }
         }
     }
 }

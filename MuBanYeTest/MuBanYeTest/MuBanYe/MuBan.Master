@@ -10,6 +10,7 @@
         
     </asp:ContentPlaceHolder>
     <link  href="../css/MuBanStyle.css" rel="stylesheet" type="text/css" />
+  
 </head>
 <body>
 
@@ -19,12 +20,13 @@
 <div class="tabbar">
   <div class="tabs">
     <div class="float_icon">新</div>
-    <a href="http://www.mianfeimoban.com/" title="首 页" class="actived" style="margin-left:0;padding-left:0;">首 页</a> 
-	<a href="#" title="网络营销">二手房</a> 
-	<a href="#" title="电子商务">新房</a> 
-	<a href="#" title="博客营销">我要卖房</a> 
-	<a href="#" title="CSS代码">我要出租</a> 
-	<a href="#" title="CSS菜单">我是经纪人</a>
+    <a href="http://www.mianfeimoban.com/" title="首页"  actived" style="margin-left:0;padding-left:0;">首 页</a> 
+	<a href="#" title="二手房信息">二手房</a> 
+	<a href="#" title="新房信息">新房</a> 
+      <a href="#" title="我要求租">求租</a>
+	<a href="../SellHouse_first.aspx" title="我要卖房">我要卖房</a> 
+	<a href="#" title="我要出租">我要出租</a> 
+	
 	</div>
   <div class="bg">
     <div class="nw"></div>
@@ -34,15 +36,11 @@
     <div class="cen"></div>
     <div class="ne"></div>
  </div>
-    <div id="LoginDiv">
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-        <p>
-            <br />
-        </p>
-        <p>
-        </p>
-        
-        </asp:ContentPlaceHolder>
+    <div id="LoginDiv" runat="server">
+        <asp:Label ID="LoginStatus" runat="server" Text="Label"></asp:Label>
+        <br />
+        <br />
+        <asp:HyperLink ID="ToUserDetailOrLogin" runat="server">HyperLink</asp:HyperLink>
         </div>
 </div>
 </div>
@@ -51,11 +49,11 @@
         
         <div id="center">
             <div id="center-left">
-               <div  class="search_form">
+              <%-- <div  class="search_form">
                  <asp:TextBox ID="TextBox1" runat="server" CssClass="sinput"  autofocus x-webkit-speech></asp:TextBox>
                    <asp:Button ID="Button1" runat="server" Text="新房" CssClass="sbtn" />
                    <asp:Button ID="Button2" runat="server" Text="二手房" CssClass="sbtn"/>
-               </div>
+               </div>--%>
 
                      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                          <p>
